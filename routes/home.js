@@ -9,6 +9,7 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   console.log("home!");
   res.sendFile(path.join(rootDir, "views","index.html"));
+
 });
 
 module.exports = router;
