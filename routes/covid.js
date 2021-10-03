@@ -9,7 +9,7 @@ const rootDir = require("./root-path");
 const router = express.Router();
 
 router.get("/covid", (req, res, next) => {
-  console.log("Web Covid-19");
+  console.log("Covid-19 Page");
   res.sendFile(path.join(rootDir, "views", "covid.html"));
 });
 

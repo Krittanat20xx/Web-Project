@@ -7,7 +7,7 @@ const rootDir = require("./root-path");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  console.log("home!");
+  console.log("Home Page");
   res.sendFile(path.join(rootDir, "views", "index.html"));
 });
 
