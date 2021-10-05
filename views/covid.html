@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>🧬Covid-19🧬</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/covid_19.css" />
+    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+    <link rel="stylesheet" href="/css/country.css" />
   </head>
   <body>
     <header class="main-header">
@@ -16,13 +16,17 @@
       </nav>
     </header>
     <main>
-      <form class="product-from" action="/covid" method="POST">
-        <div class="form-control">
-          <label for="title">title</label>
-          <input type="text" name="title" id="title" />
+      <!-- <form class="product-from" action="/covid" method="POST"> -->
+        <div >
+          <label for="title">Covid-19</label>
+          <input type="text" name="title" id="title" class="covid-19"/><br>
         </div>
-        <button type="submit">ค่อยใส่covid</button>
-      </form>
+        <button type="button" onclick = "submit()">Search Covid-19🌏</button>&emsp;
+      <!-- </form> -->
     </main>
+    <main>
+      <div class="cv-Container"></div>
+      </main>
+      <script src="/js/covidFetch.js"></script>
   </body>
 </html>
