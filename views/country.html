@@ -15,18 +15,22 @@
         </ul>
       </nav>
     </header>
+
     <main>
-      <!-- <form class="product-from" action="/admin/country" method="POST"> -->
+      <form action="/admin/country" method="POST"> 
         <div>
           <label for="title">Country</label>
-          <input type="text" name="title" id="title" class="ctryName" /><br>
+          <input type="text" name="title" id="input" class="ctryName"/><br>
         </div>
-       <button type="button" onclick = "submit()">search country🌏</button>&emsp;
-      <!-- </form> -->
+       <button class="btn-Country" type="submit" >search country🌏</button>&emsp;
+      </form>
     </main>
+
     <main>
     <div class="ctryContainer"></div>
     </main>
+    
     <script src="/js/countryFetch.js"></script>
+    <script src="/js/reqCovid.js"></script>
   </body>
 </html>

@@ -43,3 +43,43 @@ main {
 .main-header__item a.active {
     color: #3e00a1;
 }
+
+
+.country_data {
+    padding: 2.5rem 3.75rem 3rem 3.75rem;
+    /* background-color: aquamarine; */
+  }
+
+  .country {
+    /*display: flex;
+    flex-direction: row;*/
+  
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
+    width: 40rem;
+    border-radius: 0.7rem;
+    margin: 0.5rem 3rem;
+  }
+
+.country_img {
+    width: 40rem;
+    height: 25rem;
+    object-fit: cover;
+    background-color: #eee;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+
+  .country_name {
+    font-size: 2.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .country_region {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    color: #888;
+  }
+

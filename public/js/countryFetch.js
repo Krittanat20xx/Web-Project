@@ -1,15 +1,19 @@
 "use strict";
-
+const btnCountry = document.querySelector(".btn-Country");
 const countryContainer = document.querySelector(".ctryContainer");
 // const ctryName = document.querySelector(".ctryName");
 
 const renderCountry = function (data, className = "") {
-  console.log(data);
+  // console.log(data);
   const html = `<article class="country ${className}">
-                    <div><h1>${data.name.common}</h1></div>
-                    <div><h4> 🏰 : ${data.capital}</h4>
-                        <h4> 🌐 : ${data.region}</h4>
-                    </div>
+                    <img class="country_img" src="${data.flags[1]}" />
+                    <div class="country_data">
+                    <h1 class="country_name">${data.name.common}</h1>
+                    <h4 class="country_region"> 🏰 : ${data.capital}</h4>
+                    <h4 class="country_region"> 🌐 : ${data.region}</h4>
+                    
+                    <p><span></span><a onclick="fetchCovidData('${data.name.common}')">Covid19!</a></p>
+                    <div/>
                 </article>`;
 
   countryContainer.insertAdjacentHTML("beforeend", html);
@@ -32,7 +36,7 @@ const fetchCountryData = function (name) {
       console.log(data[0]);
 
       neighbour = data[0].borders;
-      console.log(neighbour);
+      // console.log(neighbour);
 
       // if (!neighbour) throw new Error(`No neighbour was found`);
       // return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
@@ -49,7 +53,7 @@ const fetchCountryData = function (name) {
           })
 
           .then((data) => {
-            console.log(data[0]);
+            // console.log(data[0]);
             renderCountry(data[0], "neighbour");
           })
 
@@ -61,8 +65,10 @@ const fetchCountryData = function (name) {
     });
 };
 
-function submit() {
-  const ctryName = document.getElementsByClassName("ctryName");
-  console.log(ctryName[0].value);
-  fetchCountryData(ctryName[0].value);
-}
+// function submit() {
+//   const ctryName = document.getElementsByClassName("ctryName");
+//   console.log(ctryName[0].value);
+//   fetchCountryData(ctryName[0].value);
+// }
+
+btnCountry.addEventListener('click' , () => fetchCountryData(input.value));

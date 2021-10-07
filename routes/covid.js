@@ -9,17 +9,17 @@ const rootDir = require("./root-path");
 const router = express.Router();
 
 router.get("/covid", (req, res, next) => {
-  console.log("Covid-19 Page");
+  console.log("Get Covid-19");
   res.sendFile(path.join(rootDir, "views", "covid.html"));
 });
 
 router.post("/covid", (req, res, next) => {
   console.log(typeof req.body);
   const msg = JSON.parse(JSON.stringify(req.body));
-  const txtMsg = "\nTitle : "+msg["title"];
+  const txtMsg = "Show Covid : "+msg["title"]+"\n";
 
   fs.appendFile(
-    path.join(rootDir,"data","text.txt"),
+    path.join(rootDir,"data","log"),
     txtMsg,
     (err) => {
       if (err) throw err;
@@ -27,6 +27,6 @@ router.post("/covid", (req, res, next) => {
     }
   );
 
-  res.redirect("/");
+  // res.redirect("/");
 });
 module.exports = router;
