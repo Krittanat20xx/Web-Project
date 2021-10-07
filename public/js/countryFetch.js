@@ -6,15 +6,16 @@ const countryContainer = document.querySelector(".ctryContainer");
 const renderCountry = function (data, className = "") {
   // console.log(data);
   const html = `<article class="country ${className}">
-                    <img class="country_img" src="${data.flags[1]}" />
-                    <div class="country_data">
-                    <h1 class="country_name">${data.name.common}</h1>
-                    <h4 class="country_region"> 🏰 : ${data.capital}</h4>
-                    <h4 class="country_region"> 🌐 : ${data.region}</h4>
-                    
-                    <p><span></span><a onclick="fetchCovidData('${data.name.common}')">Covid19!</a></p>
-                    <div/>
-                </article>`;
+  <img class="country_img" src="${data.flags[1]}" />
+  <div class="country_data">
+  <p class="country_name">${data.name.common}</p>
+  <p class="country_region"> 🏰 : ${data.capital}</p>
+  <p class="country_region"> 🌐 : ${data.region}</p>
+  
+  <p><span class="covid_ctry"><a onclick="fetchCovidData('${data.name.common}')">Covid19!</a></span></p>
+  
+    <div/>
+</article>`;
 
   countryContainer.insertAdjacentHTML("beforeend", html);
   countryContainer.style.opacity = 1;

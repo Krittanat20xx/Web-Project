@@ -2,26 +2,33 @@
 <html>
   <head>
     <title>🧬Covid-19🧬</title>
-    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
-    <link rel="stylesheet" href="/css/country.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="/css/covid_19.css" />
   </head>
   <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
-          <li class="main-header__item"><a href="/">Home</a></li>
-          <li class="main-header__item"><a href="/admin/country">Country</a></li>
-          <li class="main-header__item"><a href="/covid">Refresh</a></li>
+          <li class="w3-bar-item w3-button"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+          <li class="w3-bar-item w3-button"><a href="/admin/country">Country</a></li>
+          <li class="w3-bar-item w3-button"><a href="/covid">Refresh</a></li>
         </ul>
       </nav>
+    </div>
+  </div>
     </header>
+
     <main>
       <form action="/covid" method="POST">
         <div >
-          <label for="title">Covid-19</label>
-          <input type="text" name="title" id="input" class="covid19"/><br>
+          <br><br>
+          <label for="title">Covid-19</label>&emsp;
+          <input type="text" name="title" id="input" class="covid19"/>
         </div>
-        <button class="btnCovid" type="submit" >Search Covid-19🌏</button>&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;<button class="btnCovid" type="submit" >Search Covid-19 🩸</button>
       </form>
     </main>
     <main>

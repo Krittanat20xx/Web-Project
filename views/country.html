@@ -2,34 +2,45 @@
 <html>
   <head>
     <title>✈Country✈</title>
-    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="/css/country.css" />
+    
   </head>
   <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
-          <li class="main-header__item"><a href="/">Home</a></li>
-          <li class="main-header__item"><a href="/covid">Covid-19</a></li>
-          <li class="main-header__item"><a href="/admin/country">Refresh</a></li>
+          <li class="w3-bar-item w3-button"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+          <li class="w3-bar-item w3-button"><a href="/covid">Covid-19</a></li>
+          <li class="w3-bar-item w3-button"><a href="/admin/country">Refresh</a></li>
+        
         </ul>
       </nav>
+    </div>
+  </div>
     </header>
+  
+   
 
-    <main>
-      <form action="/admin/country" method="POST"> 
+    <main >
+      <form  action="/admin/country" method="POST"> 
         <div>
-          <label for="title">Country</label>
-          <input type="text" name="title" id="input" class="ctryName"/><br>
+          <br><br>
+            <label for="title">Country</label>&emsp;
+          <input type="text" name="title" id="input" class="ctryName"/>
         </div>
-       <button class="btn-Country" type="submit" >search country🌏</button>&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;<button  class="btn-Country" type="submit" >search country 🌏</button>
       </form>
     </main>
+ 
 
     <main>
     <div class="ctryContainer"></div>
     </main>
-    
+
     <script src="/js/countryFetch.js"></script>
     <script src="/js/reqCovid.js"></script>
   </body>
