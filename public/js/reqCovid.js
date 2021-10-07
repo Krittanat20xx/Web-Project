@@ -7,7 +7,7 @@ const renderCovid = function (data , className="") {
   const html = `<article class="covid-19 ${className}">
                         <div><p>${data.country}</p></div>
                         <div><ul>
-                        ☠ : Deaths =${data.deaths}</li>
+                        ☠ : Deaths = ${data.deaths}</li>
                         </ul></div>
                 </article>`;
 

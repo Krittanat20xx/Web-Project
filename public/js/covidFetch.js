@@ -1,6 +1,6 @@
 "use strict";
 const btnCovid = document.querySelector(".btnCovid");
-const covidContainer = document.querySelector(".ctryContainer");
+const covidContainer = document.querySelector(".cvContainer");
 // const ctryName = document.querySelector(".ctryName");
 
 const renderCovid = function (data , className="") {
