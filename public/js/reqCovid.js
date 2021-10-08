@@ -1,22 +1,24 @@
-const covidContainer = document.querySelector(".ctryContainer");
+const countriesContainer = document.querySelector(".ctryContainer");
 
 const renderCovid = function (data , className="") {
-
-
     // console.log(data);
-  const html = `<article class="covid-19 ${className}">
-                        <div><p>${data.country}</p></div>
-                        <div><ul>
-                        ☠ : Deaths = ${data.deaths}</li>
-                        </ul></div>
+  const html = `<article class="covid ${className}">
+                    <div class="covid_data" style="width: 50rem;">
+                    <p class="country_covid_name"><a onclick="fetchCountryData('${data.country}')">${data.country}</a></p>
+                    <p class="covid_item"> เมืองหลวง : ${data.capital_city} </p>
+                    <p class="covid_item"> ประชากรทั้งหมด : ${data.population} </p>
+                    <p class="covid_item"> Deaths : ${data.deaths} </p>
+                    <p class="covid_item"> ติดเชื้อสะสม : ${data.confirmed} </p>
+                    </ul></div>
                 </article>`;
 
-covidContainer.insertAdjacentHTML("beforeend", html);
-covidContainer.style.opacity = 1;
+countriesContainer.insertAdjacentHTML("beforeend", html);
+countriesContainer.style.opacity = 1;
 };
 
-const fetchCovidData = function (name) 
+const fetchCovidData = function(name) 
 {
+  countriesContainer.innerHTML = "";
     fetch(`https://covid-api.mmediagroup.fr/v1/cases?country=${name}`)
     .then((response) => {
       console.log(response);

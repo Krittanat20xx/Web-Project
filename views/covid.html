@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="/css/covid_19.css" />
+    <link rel="stylesheet" href="/css/country.css" />
   </head>
   <body>
     <div class="w3-top">
@@ -12,19 +13,18 @@
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list">
-          <li class="w3-bar-item w3-button"><a href="/"><i class="fa fa-home"></i>Home</a></li>
-          <li class="w3-bar-item w3-button"><a href="/admin/country">Country</a></li>
-          <li class="w3-bar-item w3-button"><a href="/covid">Refresh</a></li>
+          <li class="w3-bar-item w3-button"><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+          <li class="w3-bar-item w3-button"><a href="/admin/country">COUNTRY</a></li>
+          <li class="w3-bar-item w3-button"><a href="/covid">REFRESH</a></li>
         </ul>
       </nav>
     </div>
   </div>
     </header>
-
     <main>
       <form action="/covid" method="POST">
         <div >
-          <br><br>
+          <br><br><h6>[ชื่อประเทศตัวเเรกต้องเป็นตัวใหญ่เสมอ]</h6>
           <label for="title">Covid-19</label>&emsp;
           <input type="text" name="title" id="input" class="covid19"/>
         </div>
@@ -35,5 +35,6 @@
       <div class="cvContainer"></div>
       </main>
       <script src="/js/covidFetch.js"></script>
+      <script src="/js/reqCountry.js"></script>
   </body>
 </html>

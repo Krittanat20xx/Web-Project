@@ -1,16 +1,12 @@
-"use strict";
-const countryContainer = document.querySelector(".ctryContainer");
-const btnCountry = document.querySelector(".btn-Country");
+const cvContainer = document.querySelector(".cvContainer");
 
-// const ctryName = document.querySelector(".ctryName");
-
-const renderCountry = function (data, className = "") {
+const renderCountry = function(data, className = "") {
   // console.log(data);
   const cur = Object.values(data.currencies)[0]
   const lg = Object.values(data.languages)[0]
+
   const html = `<article class="country ${className}">
   <img class="country_img" src="${data.flags[1]}" />
-  
   <div class="country_data">
   <p class="country_name">${data.name.common}</p>
   <p class="country_region">${data.region}</p>
@@ -23,13 +19,13 @@ const renderCountry = function (data, className = "") {
   <div/>
 </article>`;
 
-  countryContainer.insertAdjacentHTML("beforeend", html);
-  countryContainer.style.opacity = 1;
+cvContainer.insertAdjacentHTML("beforeend", html);
+cvContainer.style.opacity = 1;
 };
 
 const fetchCountryData = function (name) {
   let neighbour;
-  countryContainer.innerHTML = "";
+  cvContainer.innerHTML = "";
   fetch(`https://restcountries.com/v3/name/${name}`)
     .then((response) => {
       console.log(response);
@@ -71,15 +67,8 @@ const fetchCountryData = function (name) {
           .catch((err) => {
             renderErrMsg(`Something wrong, ${err.message}, Try again`);
           })
-          .finally(() => (countryContainer.style.opacity = 1.5));
+          .finally(() => (cvContainer.style.opacity = 1.5));
       }
     });
 };
-
-// function submit() {
-//   const ctryName = document.getElementsByClassName("ctryName");
-//   console.log(ctryName[0].value);
-//   fetchCountryData(ctryName[0].value);
-// }
-
-btnCountry.addEventListener('click' , () => fetchCountryData(input.value));
+  
