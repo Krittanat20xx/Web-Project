@@ -15,14 +15,21 @@
         <ul class="main-header__item-list">
           <li class="w3-bar-item w3-button"><a href="/"><i class="fa fa-home"></i>HOME</a></li>
           <li class="w3-bar-item w3-button"><a href="/covid">COVID-19</a></li>
-          <li class="w3-bar-item w3-button"><a href="/admin/country">REFRESH</a></li>
+          <li class="w3-bar-item w3-button"><a href="/country">REFRESH</a></li>
         </ul>
       </nav>
     </div>
   </div>
     </header>
+
+    <!-- <div class="bgimg-1 w3-display-container w3-opacity-min " id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;"> -->
+        <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WEBSITE&ensp;<span class="w3-hide-small">COVID-19&ensp;&&ensp;</span>COUNTRY</span> -->
+      </div>
+    </div>
+
     <main >
-      <form  action="/admin/country" method="POST"> 
+      <form  action="/country" method="POST"> 
         <div>
           <br><br>
             <label for="title">Country</label>&emsp;
@@ -33,6 +40,5 @@
       <div class="ctryContainer"></div> 
     </main>
     <script src="/js/countryFetch.js"></script>
-    <script src="/js/reqCovid.js"></script>
   </body>
 </html>

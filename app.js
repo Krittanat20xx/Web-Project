@@ -7,7 +7,7 @@ const express = require("express");
 
 const app = express();
 
-const adminRoutes = require("./routes/admin");
+const countryRoutes = require("./routes/country");
 const homeRoutes = require("./routes/home");
 const covidRoutes = require("./routes/covid");
 
@@ -16,7 +16,8 @@ const covidRoutes = require("./routes/covid");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/admin", adminRoutes);
+app.use("/country/region",countryRoutes)
+app.use(countryRoutes);
 app.use(covidRoutes);
 app.use(homeRoutes);
 

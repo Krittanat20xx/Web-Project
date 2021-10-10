@@ -73,6 +73,7 @@ label {
     /* background-color: aquamarine; */
   }
 
+  /* ปรับกล่องใส่ธงกับรายละเอียด */
   .country {
     /* display: flex; */
     /* flex-direction: row; */
@@ -80,15 +81,16 @@ label {
     background-color: rgba(255, 255, 255, 0.336);
     box-shadow: 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
     font-size: 0.5rem;
-    width: 15rem; /*Width Box*/
-    height: 31rem;  /*Height BOx*/
+    width: 19rem; /*Width Box*/
+    height: 41rem;  /*Height BOx*/
     border-radius: 0.7rem;
     margin: 0.5rem 1rem;
   }
 
+/* ปรับขนาดรูปธง */
 .country_img {
-    width: 15rem;
-    height: 8rem;
+    width: 19rem;
+    height: 13rem;
     object-fit: cover;
     background-color: rgba(238, 238, 238, 0.219);
     border-top-left-radius: 0.15rem;
@@ -103,8 +105,9 @@ label {
 
     color: black;
   }
-
-  .country_region {
+  /* รายละเอียดในกล่อง */
+  .country_item {
+    margin-left: 1rem;
     font-size: 1rem;
     margin-top: 0.15;
     margin-bottom: 0.0025rem;
@@ -171,6 +174,7 @@ label {
     overflow: scroll;
   }
   .country__item a {
+    
     font-size: 1.2rem;
     font-weight:bold;
     text-decoration: none;
@@ -178,5 +182,55 @@ label {
   }
 
 
+  .regionContainer{
+    margin-top: 10rem;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+    overflow: scroll;
+  }
+
   
-  
+  .country_region {
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    margin-top: 0.025rem;
+    margin-bottom: 0.025rem;
+    text-transform: uppercase;
+    color: rgb(45, 0, 209);
+  }
+
+  /* Create a Parallax Effect ห้ามลบ */
+.bgimg-1 
+{
+ 
+} 
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+ background-image: url('../Img/country1.jpg');
+ min-height: 100%;
+ /* height: 500px; */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+}
+
+.w3-wide {
+ letter-spacing: 15px;
+}
+.w3-hover-opacity {
+ cursor: pointer;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+ .bgimg-1
+  {
+   /* background-attachment: scroll; */
+   /* min-height: 600px; */
+ }
+}
