@@ -18,7 +18,7 @@ router.get("/country", (req, res, next) => {
 router.post("/country", (req, res, next) => {
   console.log( req.body);
   const msg = JSON.parse(JSON.stringify(req.body));
-  const txtMsg = "Show Country : "+msg["title"]+"\n";
+  const txtMsg = "Search with : "+msg["title"]+"\n";
 // console.log(txtMsg);
 
   fs.appendFile(

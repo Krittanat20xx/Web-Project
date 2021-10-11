@@ -17,14 +17,14 @@ const renderCountry = function (data, className = "") {
   <div class="country_data">
   <p class="country_name">${data.name.common}</p>
   <p class="country_region">
-    <a href="/country/region?countryName=${data.region}">${data.region} Click!</a></p>
+    <a href="/country/region?countryName=${data.region}">${data.region}</a></p>
   <p class="country_item"> เมืองหลวง 🏰 : ${data.capital}</p>
   <p class="country_item"> ประชากร 👨‍👩‍👦‍👦 : ${data.population}</p>
   <p class="country_item"> ภาษาที่ใช้ 📢 : ${lg}</p>
   <p class="country_item"> สกุลเงิน 💵 : ${cur.name} </p>
   <p class="country_item"> เนื้อที่ 🗺 : ${data.area} </p>
   <p class="country_region">
-    <a href="/covid?countryName=${data.name.common}">สถานการณ์ Covid-19 Click!</a></p>
+    <a href="/covid?countryName=${data.name.common}">สถานการณ์ Covid-19</a></p>
   <div/>
 </article>`;
 

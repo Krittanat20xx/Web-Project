@@ -17,7 +17,8 @@ const renderCountry = function (data, className = "") {
   const html = `<article class="country ${className}">
   <img class="country_img" src="${data.flags[1]}" />
   <div class="country_data">
-  <p class="country_name">${data.name.common}</p>
+  <p class="country_region">
+    <a  href="/country?countryName=${data.name.common}">${data.name.common}</a></p>
   <p class="country_item">${data.region}</p>
   <p class="country_item"> เมืองหลวง 🏰 : ${data.capital}</p>
   <p class="country_item"> ประชากร 👨‍👩‍👦‍👦 : ${data.population}</p>

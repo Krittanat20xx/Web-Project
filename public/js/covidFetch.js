@@ -15,7 +15,7 @@ const renderCovid = function (data , className="") {
   const html = `<article class="covid ${className}">       
                 <div class="covid_data">
                <p class="linkCountry">
-                    <a  href="/country?countryName=${data.country}">${data.country} Click!</a>
+                    <a  href="/country?countryName=${data.country}">${data.country}</a>
                 <p class="covid_row"><span>เมืองหลวง 🏛 :</span>${data.capital_city} </p>
                 <p class="covid_row"><span>อายุขัยเฉลี่ย 👴🏻 :</span>${data.life_expectancy} years</p>
                 <p class="covid_row"><span>เสียชีวิต 💀 :</span>${data.deaths} People</p>

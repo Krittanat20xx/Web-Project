@@ -158,10 +158,10 @@ label {
     top: -4rem;
   
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #888;
+    color: rgb(255, 255, 255);
   }
 
   .ctryContainer {
